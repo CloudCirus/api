@@ -8,7 +8,7 @@ def show_weather(location: str, language: str, unit: str) -> None:
         location: city or aiport ICAO
         language: `ru` or `en`
         unit: `u` for USCS system, `m` for SI system.
-      
+
     """
     payload = {
         'n': '',
@@ -24,11 +24,16 @@ def show_weather(location: str, language: str, unit: str) -> None:
     print(resp.text)
 
 
+def main(url_params: list) -> None:
+    for args in url_params:
+        show_weather(*args)
+
+
 url_params = [
     ('Лондон', 'en', 'u'),
     ('SVO', 'en', 'u'),
     ('Череповец', 'ru', 'm')
 ]
 
-for args in url_params:
-    show_weather(*args)
+if __name__ == '__main__':
+    main(url_params)
