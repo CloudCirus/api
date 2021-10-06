@@ -24,16 +24,15 @@ def show_weather(location: str, language: str, unit: str) -> None:
     print(resp.text)
 
 
-def main(url_params: list) -> None:
+def main() -> None: # в main мы прост инкапсулируем и не передаем никаких параметров
+    url_params = [ # в скрипте не должно быть глобальных переменных
+        ('Лондон', 'en', 'u'),
+        ('SVO', 'en', 'u'),
+        ('Череповец', 'ru', 'm')
+    ]
     for args in url_params:
         show_weather(*args)
 
 
-url_params = [
-    ('Лондон', 'en', 'u'),
-    ('SVO', 'en', 'u'),
-    ('Череповец', 'ru', 'm')
-]
-
 if __name__ == '__main__':
-    main(url_params)
+    main()
