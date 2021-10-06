@@ -24,8 +24,8 @@ def show_weather(location: str, language: str, unit: str) -> None:
     print(resp.text)
 
 
-def main() -> None: # в main мы прост инкапсулируем и не передаем никаких параметров
-    url_params = [ # в скрипте не должно быть глобальных переменных
+def main() -> None:
+    url_params = [
         ('Лондон', 'en', 'u'),
         ('SVO', 'en', 'u'),
         ('Череповец', 'ru', 'm')
