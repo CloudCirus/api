@@ -2,7 +2,7 @@
 
 ## About <a name = "about"></a>
 
-Script usin bitly.com API. Input url to convert it to short bitlink, or input bitlink to see all clicks.
+Script use bitly.com API. Input url to convert it to short bitlink, or input bitlink to see all clicks.
 
 ## Getting Started <a name = "getting_started"></a>
 
